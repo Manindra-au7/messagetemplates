@@ -1,9 +1,4 @@
-function format ( d ) {
-    return 'Full name: '+d.first_name+' '+d.last_name+'<br>'+
-        'Salary: '+d.salary+'<br>'+
-        'The child row can contain any data you wish, including links, images, inner tables etc.';
-}
- 
+
 $(document).ready(function() {
     var dt = $('#example').DataTable( {
         "processing": true,
@@ -16,10 +11,13 @@ $(document).ready(function() {
                 "data":           null,
                 "defaultContent": ""
             },
-            { "data": "first_name" },
-            { "data": "last_name" },
-            { "data": "position" },
-            { "data": "office" }
+            { "data": "Template Id" },
+            { "data": "Type" },
+            { "data": "Language" },
+            { "data": "Title" },
+            { "data": "Text" },
+            { "data": "Media Type" },
+            { "data": "Status" }
         ],
         "order": [[1, 'asc']]
     } );
